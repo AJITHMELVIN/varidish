@@ -6,126 +6,147 @@
 <html lang="en-US">
 
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="shortcut icon" href="dir/iimg/favicon.png" />
-<title>Varidish</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="dir/iimg/favicon.png" />
+    <title>Varidish</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.5.0.min.js"></script>
 
+    <link rel="stylesheet" href="assets/css/varidish.css">
 
-<link rel="stylesheet" href="assets/css/varidish.css">
 
 </head>
 
 <body>
+    <!-- <div>
+                                <form id="test-form">
+                                    <input type="text" id="field1" />
+                                    <input type="text" id="field2" />
+                                    <input type="submit" id="submit" />
+                                </form>
+                            </div>-->
 
-<div id="st-container" class="st-container">
-		
-			<nav class="st-menu st-effect-1" id="menu-1">
-				   <div class="login">
-	<div class="buttons">
-		<ul>
-			<li><a class="face" href="#"><span class="face"> </span>Login to Facebook</a></li>
-			<li><a class="twit" href="#"><span class="twit"> </span>Login to Twitter</a></li>
-		</ul>
-	</div>
-	<h2>Login with your Email</h2>
-	<form>
-	<input type="text" value="Username" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'User Name';}"/>
-	<input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'User Name';}"/>
-	</form>
-	<div class="forgot">
-   	  <label class="checkbox"><input type="checkbox" name="checkbox" checked><i> </i> Remember me</label>
-   	  <div class="forgot-para">
-   	  	<a href="#"> <p>Forgot  Password?</p></a>
-   	  </div>
-	   	<div class="clear"> </div>
-	</div>
-	<form>
-	<label  class="hvr-sweep-to-bottom">
-	<input type="submit" value="Login"/>
-	</label>
-	</form>
-    <div id="st-trigger-effects">
-    <div class="btn" id="st-trigger-effects" >
+    <div id="st-container" class="st-container">
 
-<button class="not-yet" data-effect="st-effect-2">Not a member ? <span>Sign up now!</span></button>
+        <nav class="st-menu st-effect-1" id="menu-1">
+            <div class="login">
+                <div class="buttons">
+                    <ul>
+                        <li><a class="face" href="#"><span class="face"> </span>Login
+								to Facebook</a></li>
+                        <li><a class="twit" href="#"><span class="twit"> </span>Login
+								to Twitter</a></li>
+                    </ul>
+                </div>
+                <h2>Login with your Email</h2>
+                <form id="login-form">
+                    <input type="text" id="uname" value="Username" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'User Name';}" />
+                    <input type="password" id="pwd" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'User Name';}" />
+                    <div class="forgot">
+                        <label class="checkbox">
+                            <input type="checkbox" name="checkbox" checked><i> </i> Remember me</label>
+                        <div class="forgot-para">
+                            <a href="#">
+                                <p>Forgot Password?</p>
+                            </a>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <label class="hvr-sweep-to-bottom">
+                        <input type="submit" value="Login" />
+                    </label>
+                </form>
+                <div id="st-trigger-effects">
+                    <div class="btn" id="st-trigger-effects">
+
+                        <button class="not-yet" data-effect="st-effect-2">
+                            Not a member ? <span>Sign up now!</span>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+        </nav>
+        <nav class="st-menu st-effect-2" id="menu-2">
+            <div class="login">
+
+                <h2>Please follow these simple steps to register your
+					restaurant with Varidish</h2>
+                <form>
+                    <input type="text" value="Your Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your Name';}" />
+                    <input type="text" value="Resturent Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Resturent Name';}" />
+                    <input type="text" value="Street" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Street';}" />
+                    <input type="text" value="Resturent Type" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Resturent Typee';}" />
+                    <input type="text" value="Contact Number" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Contact Number';}" />
+                    <input type="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" />
+                    <input type="text" value="User Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Unername';}" />
+                    <input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Passworde';}" />
+                    <input type="password" value="Re-Enter Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Re Enter Password';}" />
+                </form>
+
+                <form>
+                    <label class="hvr-sweep-to-bottom">
+                        <input type="submit" value="Register" />
+                    </label>
+                </form>
+
+            </div>
+        </nav>
+
+        <div class="st-content">
+            <div class="st-content-inner">
+                <div class="vari-wrap">
+
+                    <div class="vari-head-wrap">
+                        <div class="vari-head">
+                            <div class="vara-logo">
+                                <a href="#"><img src="assets/img/varidish-logo-2x.png"></a>
+                            </div>
+
+                            <div class="head-search">
+
+                                <input name="" type="text" placeholder="Type Restaurant name or your location">
+
+                            </div>
+
+                            <div class="btn" id="st-trigger-effects">
+                                <button class="login" data-effect="st-effect-1">Log In</button>
+                                <button class="signup">Sign up</button>
+                                <button class="reg" data-effect="st-effect-2">Reg. Your Restaurant
+                                </button>
 
 
+                            </div>
 
-</div>
-	
+
+                        </div>
+                    </div>
+
+
+                    <div class="vari-mid">
+
+                        <div class="play-icon">
+                            <img src="assets/img/play-icon.png" width="129" height="72">
+                            <h1>
+								How we are usefull<br> to increase your business?
+							</h1>
+
+                        </div>
+                    </div>
+
+
+                    <div class="footer-wrap"></div>
+
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-			
-			</nav>
-<nav class="st-menu st-effect-2" id="menu-2">
-				 <div class="login">
-	
-	<h2>Please follow this simple steps to register your restaurant with Varidish</h2>
-	<form>
-	<input type="text" value="Your Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your Name';}"/>
-    <input type="text" value="Resturent Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Resturent Name';}"/>
-    <input type="text" value="Street" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Street';}"/>
-    <input type="text" value="Resturent Type" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Resturent Typee';}"/>
-    <input type="text" value="Contact Number" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Contact Number';}"/>
-    <input type="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}"/>
-     <input type="text" value="User Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Unername';}"/>
-<input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Passworde';}"/>
-<input type="password" value="Re-Enter Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Re Enter Password';}"/>
-	</form>
-	
-	<form>
-	<label  class="hvr-sweep-to-bottom">
-	<input type="submit" value="Register"/>
-	</label>
-	</form>
-	
-</div>
-			</nav>
-           
-            <div class="st-content"><!-- this is the wrapper for the content -->
-					<div class="st-content-inner">
-<div class="vari-wrap">
-
-<div class="vari-head-wrap">
-<div class="vari-head">
-<div class="vara-logo"><a href="#"><img src="assets/img/varidish-logo-2x.png" ></a></div>
-
-<div class="head-search">
-
-<input name="" type="text" placeholder="Type Restaurant name or your location">
-
-</div>
-
-<div class="btn" id="st-trigger-effects" >
-<button class="login" data-effect="st-effect-1">Log In</button>
-<button class="signup" >Sign up</button>
-<button class="reg" data-effect="st-effect-2">Reg. Your Restaurant</button>
-
-
-</div>
-
-
-</div>
-</div>
-
-
-<div class="vari-mid">
-
-<div class="play-icon">
-<img src="assets/img/play-icon.png" width="129" height="72">
-<h1>How we are usefull<br>
-to increase your business?</h1>
-
-</div></div>
-
-
-<div class="footer-wrap"></div>
-
-</div></div>
-</div></div>
-<script src="assets/js/classie.js"></script>
-		<script src="assets/js/main.js"></script>
+    <script src="assets/js/classie.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script type="text/javascript" src="assets/js/logincore.js"></script>
 </body>
+
 </html>
