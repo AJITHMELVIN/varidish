@@ -18,7 +18,7 @@ body {  width:100%;font-family: 'Didact Gothic', sans-serif ;
 .vara-logo{ text-align:center; margin-bottom:10px;}
 .head-search{ width:100%; float:left; }
 .head-search input{font-family: 'Didact Gothic', sans-serif ; background:rgba(255, 255, 255, 0.8); border-radius:6px; border:0px; width:96%; padding:10px; font-size:12px; border:#cdcdcd solid 1px}
-
+.logged-in-wrap{font-family: 'Didact Gothic', sans-serif ; background:rgba(0,255,0,1);}
 .vari-head-wrap .btn{ width:350px; height:40px; margin:0 auto; position:relative;}
 .vari-head-wrap .btn button{ border:0px ;color:#fff; text-decoration:none; margin:0 auto; width:50px;padding:8px;text-align:center; margin:5px;border-radius:6px;}
 .vari-head-wrap .btn button.login{ background: #69aa69;

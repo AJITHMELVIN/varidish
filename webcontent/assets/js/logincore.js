@@ -11,6 +11,7 @@ Key reviews
 
 //initialize
 Parse.initialize("w5V5aWn9B9PGmTMeUh5poxzU25cYtg9HeRS7I8T1", "IFSPsVLxturBRyaj1xDwOTes5GTdOyvwsFcGtz5o");
+setCurrentUser();
 
 //****************************************************************************************************************************
 //                                                         Listeners
@@ -24,13 +25,37 @@ Parse.initialize("w5V5aWn9B9PGmTMeUh5poxzU25cYtg9HeRS7I8T1", "IFSPsVLxturBRyaj1x
 $("#login-form").submit(function (event) {
     event.preventDefault();
     login();
+
 });
-$("logout-button").click(function (event) {
+$("#logout-button").click(function (event) {
     logout();
 });
 //****************************************************************************************************************************
 //                                                         Helpers
 //****************************************************************************************************************************
+function setCurrentUser() {
+    var currUser = Parse.User.current();
+    if(currUser)
+        {
+            var userName=currUser.getUsername()
+            $("#logged-in-wrap").html("logged in as "+userName);
+        }
+    else
+        {
+            $("#logged-in-wrap").html("please login");
+        }
+     
+    
+//    if(isLoggedIn)
+//        {
+//            $("logged-in-div").show();
+//        }
+//    else
+//        {
+//            $("logged-in-div").hide();
+//        }
+    
+}
 function login() {
     var userName = $("#uname").val();
     var password = $("#pwd").val();
@@ -46,19 +71,23 @@ function login() {
 }
 
 function logout() {
-    var userName = $("#uname").val();
-    var password = $("#pwd").val();
+    console.log("Performing submit");
 
-    Parse.User.logIn(userName, password, {
-        success: function (user) {
-            loginSuccess();
-        },
-        error: function (user, error) {
-            console.log("login failed" + error.message);
-            loginError(error);
+        //logout current user
+        if ( Parse.User.current() ) {
+            Parse.User.logOut();
 
+            // check if really logged out
+            if (Parse.User.current())
+                console.log("Failed to log out!");
+            
         }
-    });
+
+        // do redirect
+        //window.location.replace("Sign_In.html");
+        // or
+        setCurrentUser();
+        window.location.href = "testredirect.html";
 }
 
 
